@@ -1,3 +1,5 @@
+/* Plots for differing initial conditions for the LOGISTIC EQUATION */
+
 /* Defining function (solution to logistic eqn) */
 
 f(t):=(t^2+2*t+3)/(t^2+2*t-3);
