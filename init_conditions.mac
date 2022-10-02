@@ -1,0 +1,30 @@
+/* Defining function (solution to logistic eqn) */
+
+f(t):=(t^2+2*t+3)/(t^2+2*t-3);
+
+wxplot2d(f(t), [t,0,3]);
+
+wxplot2d(f(t), [t,0,3], [y,-10,10]);
+
+/* Defining functions p and q. */
+
+p(x):=x*cos(x);
+
+q(x):=x-x^3/2;
+
+/* Plot on same diagram. */
+
+wxplot2d([p(x),q(x)],[x,-3,3]);
+
+wxplot2d([p(x),q(x)], [x,-3,3], [color, black, green], [legend, "p","q"], [ylabel,"y"]);
+
+/* Note above that the characteristics of the graph were changed in the args of 'wxplot2d(...)'.
+
+Now for Exercise 3 using solution to logistic eqn: R_0 = 1; K = 1 for three different initial conditions: x(0) = 0.1, x(0) = 0.8. x(0) = 1.2. */
+
+l(x0,t):=x0/(x0+(1-x0)*exp(-t));
+
+wxplot2d([l(0.1,t),l(0.8,t),l(1.2,t)], [t, 0, 10], [legend, "x(0) = 1.2", "x(0) = 0.8", "x(0) = 0.1"], [ylabel, "x(t)"], [xlabel, "t"]);
+
+
+
