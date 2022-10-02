@@ -1,4 +1,4 @@
-/* Plots for differing initial conditions for the LOGISTIC EQUATION */
+/* Plots for differing initial conditions for the LOGISTIC EQUATION - for use in wxmaxima */
 
 /* Defining function (solution to logistic eqn) */
 
