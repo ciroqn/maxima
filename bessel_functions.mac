@@ -1,0 +1,9 @@
+/* Bessel functions are special functions that satisfy the Bessel equation, which has non-constant coefficients.
+There are two independent solutions for each value of n. The equation is xy''+xy'+(x**2-n**2)y = 0. The two
+independent solutions are denoted by J_n(x) and Y_n(x). 
+
+The graph below (or, rather, Maxima code for the graph) shows the Bessel function J_0(x), J_1(x) and J_2(x), each
+representing an independent solution at particular orders of n (1, 2 and 3, respectively). For example,
+'bessel_j(0,x)' is the Bessel special function solution at n_order = 0 evaluated at x, which in this case ranges
+from 0 to 20. */
+
