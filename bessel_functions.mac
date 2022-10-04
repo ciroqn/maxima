@@ -7,3 +7,6 @@ representing an independent solution at particular orders of n (1, 2 and 3, resp
 'bessel_j(0,x)' is the Bessel special function solution at n_order = 0 evaluated at x, which in this case ranges
 from 0 to 20. */
 
+?? Bessel; 
+
+wxplot2d([bessel_j(0,x),bessel_j(1,x),bessel_j(2,x)],[x,0,20]);
