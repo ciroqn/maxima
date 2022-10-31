@@ -16,3 +16,11 @@ wxplot2d([elliptic_e(phi, 0), elliptic_e(phi, 1/4), elliptic_e(phi, 1/2),
         elliptic_e(phi, 3/4), elliptic_e(phi, 1)], [phi, 0, %pi/2], 
     [legend, "m=0", "m=1/4", "m=1/2", "m=3/4", "m=1"], [gnuplot_preamble, "set key bottom"], 
 [xlabel, "phi"], [ylabel, "E(phi, m)"], [title, "Incomplete Elliptic Integral (Second Kind)"]);
+
+// plotting elliptic_f with similar params as above
+
+wxplot2d([elliptic_f(phi, 0), elliptic_f(phi, 1/4), elliptic_f(phi, 1/2), 
+        elliptic_f(phi, 3/4), elliptic_f(phi, 1)], [phi, 0, %pi/2], 
+    [legend, "m=0", "m=1/4", "m=1/2", "m=3/4", "m=1"], [gnuplot_preamble, "set key bottom"], 
+[xlabel, "phi"], [ylabel, "F(phi, m)"], [y, 0, 2.5], 
+    [title, "Incomplete Elliptic Integral (First Kind)"] );
