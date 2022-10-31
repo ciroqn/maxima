@@ -24,3 +24,13 @@ wxplot2d([elliptic_f(phi, 0), elliptic_f(phi, 1/4), elliptic_f(phi, 1/2),
     [legend, "m=0", "m=1/4", "m=1/2", "m=3/4", "m=1"], [gnuplot_preamble, "set key bottom"], 
 [xlabel, "phi"], [ylabel, "F(phi, m)"], [y, 0, 2.5], 
     [title, "Incomplete Elliptic Integral (First Kind)"] );
+
+// And now approximation to elliptic_f, where approximation is a polynomial in m (function is f(m))
+
+f(m):= (%pi/2)*(1-(1/4)*m/(m-1)+(1/8)*m^2/(m-1));
+
+// plot elliptic_f and f(m) on same plot with varying m, but constant phi
+
+wxplot2d([elliptic_f(%pi/2, m), f(m)], [m, 0, 0.9999], 
+    [legend, "F(pi/2, m)", "f(m)"], [gnuplot_preamble, "set key bottom"], 
+[xlabel, "m"], [ylabel, "F(pi/2, m) / f(m)"], [y, 0, 10]);
