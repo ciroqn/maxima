@@ -1,0 +1,21 @@
+fmap(x):=a*x*(1-x)
+
+a:3.74
+
+---> Maxima Comment /* Where 0.2 below is the initial condition. Note the output will be the input of the fmap() function */
+
+lstPoints:[[0,0.2]]
+
+wxplot_size:[800,600]
+
+for k:1 thru 50 do
+  (
+  lstCoords: [k,fmap(float(lstPoints[k][2]))],
+  lstPoints: append(lstPoints, [lstCoords])
+  )
+
+wxdraw2d(points_joined=true,points(lstPoints))
+
+-----> Maxima Comment/*loop creates new coordinates given the input of the second ordinate i.e. lstPoints[k][2] where k is 1 through to 50.
+                        Overall, we see the extreme sensitivity to a change in x_0 (which is the initial condition). In this case, x_0 is set
+                        to 0.2 */
